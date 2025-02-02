@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Online Shoppers Prediction</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background-color: #3a3a3a;
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background-color: #00ff88;
+            color: #1a1a1a;
+        }
+
+        .content-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .content-section h2 {
+            color: #00ff88;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tech-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .tech-card h3 {
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .tech-card p {
+            color: #e0e0e0;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+
+        .metric-card p {
+            color: #e0e0e0;
+            margin-top: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #00ff88;
+            color: #1a1a1a;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #00cc6a;
+            transform: translateY(-2px);
+        }
+
+        ul {
+            color: #e0e0e0;
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .tech-grid, .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-container">
+        <header class="project-header">
+            <h1 class="project-title">Bioinformatics Study on Assessing Microbial Community Change</h1>
+            <p class="project-subtitle">A bioinformatics study investigating the role of soil bacterial and fungal communities in managed forests of the Pacific Northwest using DNA data analysis.</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="overview">Overview</button>
+            <button class="nav-tab" data-tab="technical">Technical Details</button>
+            <button class="nav-tab" data-tab="results">Results</button>
+        </nav>
+
+        <div id="overview" class="content-section active">
+            <h2>Project Overview</h2>
+            <p>This project investigates the role of soil microbial communities in forest management. Specifically, we analyzed bacterial and fungal DNA data obtained from the Aspen thinning trial in the Pacific Northwest to assess how different forest management practices impact microbial community composition.</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Data Processing</h3>
+                    <p>Processed bacterial and fungal DNA sequences using bioinformatics tools and pipelines to extract meaningful information about microbial communities</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Statistical Analysis</h3>
+                    <p>Performed statistical analyses to determine the impact of forest management practices on microbial diversity and community structure</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Scientific Reporting</h3>
+                    <p>Summarized the results in a comprehensive scientific report, comparing findings to existing literature on microbial community dynamics in managed forests</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="technical" class="content-section">
+            <h2>Technical Implementation</h2>
+            <p>The project included the following key steps:</p>
+            <ul>
+                <li>Extraction and processing of bacterial and fungal DNA data from soil samples</li>
+                <li>Quality control and filtering of sequencing data to ensure accuracy</li>
+                <li>Statistical tests to assess the effects of forest management practices on microbial communities</li>
+                <li>Analysis of diversity indices (e.g., Shannon index) and community composition shifts</li>
+            </ul>
+            
+            <h3>Key Data Features</h3>
+            <ul>
+                <li>Bacterial and fungal species abundance</li>
+                <li>Soil composition and environmental variables</li>
+                <li>Forest management practices (e.g., thinning vs. control)</li>
+            </ul>
+        </div>
+
+        <div id="results" class="content-section">
+            <h2>Project Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">N/A</div>
+                    <p>Shannon Diversity Index</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">N/A</div>
+                    <p>Species Richness</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">N/A</div>
+                    <p>Community Shifts</p>
+                </div>
+            </div>
+            
+            <h3>Key Findings</h3>
+            <p>The study found that certain forest management practices, such as thinning, had a significant impact on the microbial community structure, with shifts in bacterial and fungal species composition. These findings contribute to the understanding of how forest management affects soil biodiversity and ecosystem functions in the Pacific Northwest.</p>
+        </div>
+
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.content-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and sections
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding section
+                    tab.classList.add('active');
+                    const targetSection = document.getElementById(tab.dataset.tab);
+                    targetSection.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
