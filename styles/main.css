@@ -76,6 +76,70 @@ a {
   margin-bottom: 20px;
 }
 
+/* Education and Experience Section */
+.education-experience {
+  padding: 50px 20px;
+  background-color: #2a2a2a;
+  text-align: center;
+}
+
+.education-experience h2 {
+  color: #00aaff;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.title h2 {
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+.contents {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contents:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+.box h4 {
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.box p {
+  color: #e0e0e0;
+}
+
 /* Work Section */
 .work {
   padding: 50px 20px;
@@ -144,7 +208,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -155,7 +219,7 @@ a {
 
 .about-text {
   max-width: 600px;
-  text-align: left;
+  text-align: center;
 }
 
 .about-text p {
@@ -313,6 +377,15 @@ a {
   .hero-content p {
       font-size: 1.2rem;
   }
+
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .col {
+      width: 100%;
+  }
 }
 
 /* Interactivity / Animations */
@@ -333,4 +406,8 @@ a {
 
 .hero-content h1 {
   animation: fadeIn 1s ease-out;
+}
+
+.contents {
+  animation: fadeIn 0.5s ease-out;
 }
