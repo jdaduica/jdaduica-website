@@ -7,6 +7,11 @@
     <title>Project 2 - Credit Card Default Classifier</title>
     <link rel="stylesheet" href="styles/main.css">
     <style>
+        body {
+            background-color: white; /* White background */
+            color: #555555; /* Slightly lighter text */
+        }
+
         .project-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -17,20 +22,20 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 2rem;
-            background-color: #1e1e1e;
+            background-color: white; /* White background */
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 162, 255, 0.1);
         }
 
         .project-title {
             font-size: 2.5rem;
-            color: #00a2ff;
+            color: #00aaff; /* Light blue */
             margin-bottom: 1rem;
         }
 
         .project-subtitle {
             font-size: 1.2rem;
-            color: #d4d4d4;
+            color: #555555; /* Slightly lighter text */
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
@@ -39,27 +44,28 @@
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 2rem;  /* Increased gap to maintain spacing between larger buttons */
             margin-bottom: 2rem;
         }
 
         .nav-tab {
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2rem;  /* Increased padding for bigger buttons */
+            font-size: 1.5rem;    /* Increased font size */
             border: none;
-            background-color: #1e1e1e;
-            color: #d4d4d4;
+            background-color: #f9f9f9;
+            color: #00aaff;       /* Light blue */
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .nav-tab:hover {
-            background-color: #292929;
+            background-color: #f0f0f0;  /* Light gray hover */
             transform: translateY(-2px);
         }
 
         .nav-tab.active {
-            background-color: #00a2ff;
+            background-color: #00aaff;  /* Light blue */
             color: #121212;
         }
 
@@ -67,7 +73,7 @@
             display: none;
             opacity: 0;
             transition: opacity 0.3s ease;
-            background-color: #1e1e1e;
+            background-color: white; /* White background */
             border-radius: 10px;
             padding: 2rem;
             margin-bottom: 2rem;
@@ -79,7 +85,7 @@
         }
 
         .content-section h2 {
-            color: #00a2ff;
+            color: #00aaff; /* Light blue */
             margin-bottom: 1.5rem;
         }
 
@@ -91,7 +97,7 @@
         }
 
         .tech-card {
-            background: #121212;
+            background: #f9f9f9; /* Light gray background */
             padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,12 +110,12 @@
         }
 
         .tech-card h3 {
-            color: #00a2ff;
+            color: #00aaff; /* Light blue */
             margin-bottom: 1rem;
         }
 
         .tech-card p {
-            color: #d4d4d4;
+            color: #555555; /* Slightly lighter text */
         }
 
         .metrics-grid {
@@ -122,7 +128,7 @@
         .metric-card {
             text-align: center;
             padding: 1.5rem;
-            background: #121212;
+            background: #f9f9f9; /* Light gray background */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -130,11 +136,11 @@
         .metric-value {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #00a2ff;
+            color: #00aaff; /* Light blue */
         }
 
         .metric-card p {
-            color: #d4d4d4;
+            color: #555555; /* Slightly lighter text */
             margin-top: 0.5rem;
         }
 
@@ -142,7 +148,7 @@
             display: inline-flex;
             align-items: center;
             padding: 0.75rem 1.5rem;
-            background-color: #00a2ff;
+            background-color: #00aaff; /* Light blue */
             color: #121212;
             border-radius: 5px;
             text-decoration: none;
@@ -151,12 +157,12 @@
         }
 
         .back-button:hover {
-            background-color: #0080cc;
+            background-color: #0080cc; /* Darker blue */
             transform: translateY(-2px);
         }
 
         ul {
-            color: #d4d4d4;
+            color: #555555; /* Slightly lighter text */
             padding-left: 1.5rem;
         }
 
