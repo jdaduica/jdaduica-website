@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julian Daduica's Portfolio</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
   <!-- Hero Section -->
@@ -42,9 +44,6 @@
       </a>
     </div>
   </section>
-
-
-
 
 
   <!-- Education and Experience Section -->
@@ -193,33 +192,49 @@
     </div>
   </section>
 
+
+
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>I'm always up for a chat or a coffee! Feel free to reach out.</h2>
-    <form action="mailto:juliandad2001@hotmail.com" method="POST" enctype="text/plain" class="contact-form">
-      <input type="text" placeholder="Your Name" required name="name">
-      <input type="email" placeholder="Your Email" required name="email">
-      <textarea placeholder="Your Message" required name="message"></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-  
 
-<!-- Link to Resume Section -->
-<section id="resume-link" class="resume-link">
-  <h2>Download My Resume</h2>
-  <p>Click below!</p>
-  <a href="assets/jdaduica RESUME.pdf" class="btn" target="_blank">Download Resume</a>
-</section>
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://linkedin.com/in/julian-daduica-1a8a68245" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/jdaduica" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/julian_daduica/" class="social-link" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a id="copy-email" class="social-link" style="cursor: pointer; color: black;">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+    <script>
+        document.getElementById("copy-email").addEventListener("click", function() {
+            navigator.clipboard.writeText("juliandad2001@hotmail.com");
+            alert("Email copied to clipboard!");
+        });
+    </script>
+  </section>
+
+
+
+  <!-- Link to Resume Section -->
+  <section id="resume-link" class="resume-link">
+    <h2>Download My Resume</h2>
+    <p>Click below!</p>
+    <a href="assets/jdaduica RESUME.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
 
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Julian Daduica. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/julian-daduica-1a8a68245" class="social-link" target="_blank">LinkedIn</a>
-      <a href="https://github.com/jdaduica" class="social-link" target="_blank">GitHub</a>
-    </div>
+    <p>Copyright &copy; 2025 Julian Daduica. All rights reserved.</p>
+
   </footer>
 
   <script src="scripts/main.js"></script>
