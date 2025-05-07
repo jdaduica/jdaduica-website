@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Online Shoppers Prediction</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            background-color: white; /* White background */
+            color: #555555; /* Slightly lighter text */
+        }
+
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 162, 255, 0.1);
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            color: #00aaff; /* Light blue */
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #555555; /* Slightly lighter text */
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;  /* Increased gap to maintain spacing between larger buttons */
+            margin-bottom: 2rem;
+        }
+
+        .nav-tab {
+            padding: 1rem 2rem;  /* Increased padding for bigger buttons */
+            font-size: 1.5rem;    /* Increased font size */
+            border: none;
+            background-color: #f9f9f9;
+            color: #00aaff;       /* Light blue */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background-color: #f0f0f0;  /* Light gray hover */
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background-color: #00aaff;  /* Light blue */
+            color: #121212;
+        }
+
+
+        .content-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: white; /* White background */
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .content-section h2 {
+            color: #00aaff; /* Light blue */
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tech-card {
+            background: #f9f9f9; /* Light gray background */
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 162, 255, 0.2);
+        }
+
+        .tech-card h3 {
+            color: #00aaff; /* Light blue */
+            margin-bottom: 1rem;
+        }
+
+        .tech-card p {
+            color: #555555; /* Slightly lighter text */
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9f9f9; /* Light gray background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00aaff; /* Light blue */
+        }
+
+        .metric-card p {
+            color: #555555; /* Slightly lighter text */
+            margin-top: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #00aaff; /* Light blue */
+            color: #121212;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #0080cc; /* Darker blue */
+            transform: translateY(-2px);
+        }
+
+        ul {
+            color: #555555; /* Slightly lighter text */
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .tech-grid, .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Prime Customer Insights Dashboard</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Adjust if your stylesheet has a different name -->
+</head>
+<body>
+  <div class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">Amazon Prime Customer Insights Dashboard</h1>
+      <p class="project-subtitle">An interactive dashboard to analyze Prime user engagement, churn patterns, and renewal behavior using real-world data.</p>
+    </header>
+
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="overview">Overview</button>
+      <button class="nav-tab" data-tab="technical">Technical Details</button>
+      <button class="nav-tab" data-tab="results">Results</button>
+    </nav>
+
+    <div id="overview" class="content-section active">
+      <h2>Project Overview</h2>
+      <p>This dashboard was built to help Amazon understand how users interact with Prime. Using behavioral data and subscription metrics, the tool highlights areas where engagement drops, supporting targeted marketing and retention strategies.</p>
+      
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Data Visualization</h3>
+          <p>Developed interactive dashboards using Dash and Plotly.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Data Analysis</h3>
+          <p>Used Pandas and NumPy to analyze engagement, churn rates, and content preferences.</p>
+        </div>
+        <div class="tech-card">
+          <h3>User Interface</h3>
+          <p>Enabled filtering by content type, subscription length, and user demographics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="technical" class="content-section">
+      <h2>Technical Implementation</h2>
+      <ul>
+        <li>Built using Dash (Plotly) for a fully interactive front-end experience.</li>
+        <li>Preprocessed large user activity logs into structured time series data.</li>
+        <li>Implemented multiple filters, dropdowns, and visual highlights to support strategic insights.</li>
+        <li>Hosted locally and optimized for responsive performance.</li>
+      </ul>
+
+      <h3>Data Features</h3>
+      <ul>
+        <li>User watch history and session duration</li>
+        <li>Renewal status and membership length</li>
+        <li>Genre engagement and peak usage times</li>
+      </ul>
+    </div>
+
+    <div id="results" class="content-section">
+      <h2>Project Results</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">35%</div>
+          <p>Churn Identified</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">4x</div>
+          <p>Retention Lift from Targeted Campaigns</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">N/A</div>
+          <p>Model Accuracy</p>
+        </div>
+      </div>
+
+      <h3>Key Takeaways</h3>
+      <p>The dashboard identified major content drop-off points and peak viewing periods, enabling Amazon teams to prioritize renewal efforts and fine-tune content strategy.</p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Portfolio</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.nav-tab');
+      const sections = document.querySelectorAll('.content-section');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          sections.forEach(s => s.classList.remove('active'));
+
+          tab.classList.add('active');
+          const targetSection = document.getElementById(tab.dataset.tab);
+          targetSection.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
